@@ -160,7 +160,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,14 +199,10 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +217,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TutorialEcommerce.App\TutorialEcommerce.App.csproj">
+      <Project>{1694dc3e-0e14-4b0b-8a2d-67474e75f4a6}</Project>
+      <Name>TutorialEcommerce.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TutorialEcommerce.Domain\TutorialEcommerce.Domain.csproj">
+      <Project>{12c384b0-5c48-4526-b8fc-b0f6203fc821}</Project>
+      <Name>TutorialEcommerce.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TutorialEcommerce.Helpers\TutorialEcommerce.Helpers.csproj">
+      <Project>{24706010-e47b-430b-badf-7cb225e21c8b}</Project>
+      <Name>TutorialEcommerce.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
